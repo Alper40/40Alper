@@ -1,0 +1,133 @@
+<html>
+    <div id="container">
+        <div id="dijital"><span id="sonuc"></span></div>
+        <div id="box">
+            <a href="#" class="tus islem">1</a>
+            <a href="#" class="tus islem">2</a>
+            <a href="#" class="tus islem">3</a>
+            <a href="#" class="tus2 islem">+</a>
+            <br>
+            <a href="#" class="tus islem">4</a>
+            <a href="#" class="tus islem">5</a>
+            <a href="#" class="tus islem">6</a>
+            <a href="#" class="tus2 islem">-</a>
+            <br>
+            <a href="#" class="tus islem">7</a>           
+            <a href="#" class="tus islem">8</a>
+            <a href="#" class="tus islem">9</a>
+            <a href="#" class="tus2 islem">*</a>
+            <br>
+            <a href="#" class="tus islem">0</a>
+            <a id="clean" href="#" class="tus2 islem">C</a>
+            <a id="hesapla" href="#" class="tus2 islem">=</a>
+            <a href="#" class="tus2 islem">/</a> 
+            
+            
+        </div>
+    </div>
+    
+    
+
+    <style>
+       
+        
+     
+        #dijital {
+            width: 270px;
+            height: 60px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 15px;
+            background: #646464;
+        }
+     
+       
+        .islem {
+            font-size: 50px;
+            text-decoration: none;
+        }
+     
+        .tus {
+            width: 60px;
+            height: 60px;
+            border: 1px solid  rgb(0, 0, 0);
+            border-radius: 10px;
+            margin: 0 2px 6px 2px;
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            background: rgb(139, 139, 139);
+        }
+     
+        .tus:hover {
+            background: rgb(204, 0, 255);
+        }
+     
+        .tus2:hover {
+            background: rgb(204, 0, 255);
+        }
+     
+        .tus2 {
+            width: 60px;
+            height: 60px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            margin: 0 2px 6px 2px;
+            display: inline-block;
+            color: #fff;
+            background: #BCC0C7;
+        }
+     
+        #sonuc {
+            display: inline-block;
+            transform: translate(-0%, 0%);
+            font-size: 55px;
+            text-align: center;
+            width: 270px;
+        }
+     
+        #clean {
+            background: rgb(206, 0, 0);
+        }
+     
+        #clean:hover {
+            background: #9e2121;
+        }
+     
+    </style>
+    
+    
+    <script>
+    
+    let secim = document.querySelector("#box").children;
+    let sonuc = document.querySelector("#sonuc");
+    let clean = document.querySelector("#clean");
+    let hesap = document.querySelector("#hesapla");
+
+    clean.addEventListener("click", temizle);
+    hesap.addEventListener("click", hesapla);
+    
+    
+    for (var i = 0; i < 19; i++) {
+        if (i != 16 && i != 17) { 
+            secim[i].addEventListener("click", yazdir);
+        }
+    }
+      
+    function hesapla() {
+        sonuc.innerText = eval(sonuc.innerText);
+        if (eval(sonuc.innerText.length) > 8) { 
+            sonuc.innerText = eval(sonuc.innerText).toPrecision(8);
+        }
+    }
+      
+    function temizle() {
+        sonuc.innerText = " ";
+    }
+       
+    function yazdir() {
+        if (sonuc.innerText.length < 8) 
+            sonuc.innerText = sonuc.innerText + this.innerText;
+    }
+    
+    </script>
