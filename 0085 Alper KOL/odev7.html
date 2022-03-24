@@ -1,0 +1,109 @@
+<html>
+<body background="Logo.jpg">
+    <div class="MENU">
+    <h1>
+        <center>
+         <font   size="250" color="#FFFFFF"> Alper Kol </font>
+    </h1>
+
+ <center><script type="text/javascript">
+window.onload = setInterval(clock,1000);
+
+function clock()
+{
+	var d = new Date();
+	var date = d.getDate();
+	var month = d.getMonth();
+	var montharr = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+	month=montharr[month];
+	var year = d.getFullYear();
+	var date = d.getDate();
+	var day = d.getDay();
+	var dayarr =["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
+	day=dayarr[day];
+	var hour = d.getHours();
+        var min = d.getMinutes();
+	var sec = d.getSeconds();
+	document.getElementById("date").innerHTML=day+" "+date+" "+month+" "+year;
+	document.getElementById("time").innerHTML=hour+":"+min+":"+sec;
+}
+
+</script> <center><style type="text/css"> body {  text-align:center; 	font-family:helvetica; } h1 { 	margin:0px; 	margin-top:20px; 	color:#8181F7; 	font-size:25px; } #date { 	margin-top:20px; 	text-align:center; 	color:white; 	font-size:20px; 	border:2px dashed #2E9AFE; 	padding:5px; 	width:250px; 	margin-left:0px; } #time { 	margin-top:20px; 	font-size:20px; 	text-align:center; 	color:white; 	border:2px dashed #2E9AFE; 	padding:5px; 	width:150px; 	margin-left:25px; } </style> <table>     <tbody>         <tr>             <td>             <p id="date"> </p>             </td>             <td>             <p id="time"> </p>             </td>         </tr>     </tbody> </table></center>		
+
+	 
+	<ul class="ustMenu">
+
+        <li><a href="index.html" target="_self">Anasayfa</a></li>
+       <li><a >Ödevler</a>
+       <ul>
+
+        <li><a href="odev1.html" target="_self">Ödev 1</a></li>
+        <li><a href="odev2.html" target="_self">Ödev 2</a></li>
+        <li><a href="odev3.html" target="_self">Ödev 3</a></li>
+        <li><a href="odev4.html" target="_self">Ödev 4</a></li>
+        <li><a href="odev5.html" target="_self">Ödev 5</a></li>
+        <li><a href="odev7.html" target="_self">Ödev 6</a></li>
+        <li><a href="odev6.html" target="_self">Ödev 7</a></li>
+        <li><a href="odev8.html" target="_self">Ödev 8</a></li>
+        <li><a href="odev12.html" target="_self">Ödev 9</a></li>
+        <li><a href="odev9.html" target="_self">Ödev 10</a></li> 
+        <li><a href="odev11.html" target="_self">Ödev 11</a></li>
+        <li><a href="odev10.html" target="_self">Ödev 12</a></li> 
+         
+    </ul>
+
+    </li>
+        <li><a href="hakkimda.html" target="_self">Hakkımda</a>
+        <li><a href="iletisim.html" target="_self">İletişim</a></li>
+      
+</body>
+     </html>
+
+	<div class="MENÜ">
+	  <style>
+	
+	.ustMenu li a{
+  display:block; 
+  font-weight: bold;
+  color: #A80078;
+  text-decoration: none;
+  padding-left: 140px;
+}
+
+li {
+    display:inline-block;
+}
+
+li a {
+    display: block;
+    color: #B7B7B7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color:#8C8C8C;
+	text-align: center;
+}
+
+ul li ul {
+    background-color:#8C8C8C;
+    display:none;
+    position:absolute;
+	text-align: center;
+  
+}
+
+ul li:hover ul{
+    display:block;
+	text-align: center;
+
+}
+li ul li {
+    display:block; 
+	text-align: center;
+}
+	
+	</style>
+</div>
